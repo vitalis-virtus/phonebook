@@ -1,0 +1,25 @@
+.logoutBtn {
+  min-width: 75px;
+  min-height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  background-color: rgb(231, 231, 231);
+}
+
+.logoutBtn:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+
+.userMenu {
+  display: flex;
+  min-width: 250px;
+  justify-content: space-between;
+}
+
+.email {
+  color: rgb(211, 214, 0);
+  font-weight: 600;
+}

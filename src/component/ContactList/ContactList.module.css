@@ -1,0 +1,26 @@
+.list {
+  padding: 0 20px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.deleteButton {
+  transition: 250ms ease-in-out;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.deleteButton:hover {
+  background-color: rgb(255, 78, 78);
+}
+
+.loading {
+  text-align: center;
+}

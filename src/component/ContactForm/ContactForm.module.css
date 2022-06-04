@@ -1,0 +1,46 @@
+
+
+.button {
+  display: block;
+  margin: 30px auto 0;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transition: 250ms ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(196, 196, 255);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+  padding: 2px;
+  transition: 500ms ease-in-out;
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.input:hover,
+input:focus {
+  border: 1px solid grey;
+  background-color: rgb(174, 255, 174);
+}
+
+.input:focus-visible {
+  outline: none;
+}

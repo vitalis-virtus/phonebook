@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Suspense, lazy } from "react";
+import { Switch } from "react-router-dom";
+import AppBar from "./component/AppBar/AppBar";
+import Container from "./component/Container";
+// import Phonebook from "./component/Phonebook";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { authOperations } from "./redux/auth";
+import { connect } from "react-redux";
+import PrivateRoute from "./component/PrivateRoute";
+import PublicRoute from "./component/PublicRoute";
+
+const HomeView = lazy(() => import("./view/HomeView"));
+const ContactsView = lazy(() => import("./view/ContactsView"));
+const RegisterView = lazy(() => import("./view/RegisterView"));
+const LoginView = lazy(() => import("./view/LoginView"));
+
+class App extends Component {
+  componentDidMount() {
+    this.props.onGetCurrentUser();
+  }
+  render() {
+    return (
+      <>
+        <AppBar />
+        <Container>
+          <Suspense fallback={<p>Loading...</p>}>
+            <Switch>
+              <PublicRoute exact path="/" component={HomeView} />
+              <PublicRoute
+                restricted
+                redirectTo="/contacts"
+                path="/register"
+                component={RegisterView}
+              />
+              <PublicRoute
+                restricted
+                redirectTo="/contacts"
+                path="/login"
+                component={LoginView}
+              />
+              <PrivateRoute
+                redirectTo="/login"
+                path="/contacts"
+                component={ContactsView}
+              />
+            </Switch>
+          </Suspense>
+        </Container>
+      </>
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = {
+  onGetCurrentUser: authOperations.getCurrentUser,
+};
+
+export default connect(null, mapDispatchToProps)(App);

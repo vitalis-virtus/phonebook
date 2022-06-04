@@ -1,0 +1,18 @@
+.Link {
+  text-decoration: none;
+  color: #000;
+  transition: 250ms ease-in-out;
+}
+
+.Link:hover {
+  color: rgb(0, 0, 136);
+}
+
+.activeLink {
+  color: rgb(187, 0, 87);
+}
+.navigation {
+  min-width: 150px;
+  display: flex;
+  justify-content: space-between;
+}

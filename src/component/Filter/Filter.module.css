@@ -1,0 +1,23 @@
+.label {
+  text-align: center;
+}
+
+.input {
+  border: 1px solid grey;
+  border-radius: 4px;
+
+  display: block;
+  width: 250px;
+  height: 35px;
+  margin: 10px auto;
+  /* padding: 10px; */
+  transition: 500ms ease-in-out;
+}
+
+.input:focus {
+  background-color: rgb(255, 255, 139);
+}
+
+input:focus-visible {
+  outline: none;
+}
