@@ -1,18 +1,54 @@
 .Link {
   text-decoration: none;
-  color: #000;
+  color: #f1f3ce;
   transition: 250ms ease-in-out;
 }
 
+.Link:not(:last-child) {
+  margin-right: 10px;
+}
+
 .Link:hover {
-  color: rgb(0, 0, 136);
+  color: #5bc8ac;
 }
 
 .activeLink {
-  color: rgb(187, 0, 87);
+  color: #b1d7d2;
+  position: relative;
+}
+
+.activeLink:hover::before {
+  background-color: #5bc8ac;
+}
+
+.activeLink::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% + 15%);
+  bottom: -20%;
+  left: -7%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #b1d7d2;
+  transition: ease-in-out 250ms;
+  animation-name: active_link_undeline;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
 .navigation {
-  min-width: 150px;
   display: flex;
   justify-content: space-between;
+}
+
+@keyframes active_link_undeline {
+  0% {
+    /* width: 0; */
+    transform: scaleX(0);
+  }
+  100% {
+    /* width: calc(100% + 15%); */
+    transform: scaleX(1);
+  }
 }

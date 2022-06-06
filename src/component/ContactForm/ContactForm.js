@@ -25,41 +25,44 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className={styles.test}>
-        <label className={styles.label}>
-          <span>Name</span>
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-            required
-            className={styles.input}
-          />
-        </label>
+      <div>
+        <h2>Add new contact</h2>
+        <form onSubmit={this.handleSubmit} className={styles.test}>
+          <label className={styles.label}>
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+              required
+              className={styles.input}
+            />
+          </label>
 
-        <br />
-        <br />
+          <br />
+          <br />
 
-        <label className={styles.label}>
-          <span>Number</span>
-          <input
-            type="tel"
-            name="number"
-            value={this.state.number}
-            onChange={this.handleChange}
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-            required
-            className={styles.input}
-          />
-        </label>
-        <button type="submit" className={styles.button}>
-          Add contact
-        </button>
-      </form>
+          <label className={styles.label}>
+            <span>Number</span>
+            <input
+              type="tel"
+              name="number"
+              value={this.state.number}
+              onChange={this.handleChange}
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+              required
+              className={styles.input}
+            />
+          </label>
+          <button type="submit" className={styles.button}>
+            Add contact
+          </button>
+        </form>
+      </div>
     );
   }
 }

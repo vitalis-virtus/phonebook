@@ -15,11 +15,24 @@
 
 .userMenu {
   display: flex;
-  min-width: 250px;
+  align-items: center;
   justify-content: space-between;
+  min-width: 300px;
+  color: #b1d7d2;
+  
+}
+.userMenu__userInfo{
+  display: flex;
+  
 }
 
+.userMenu svg{
+  fill: #b1d7d2;
+  margin-right: 10px;
+}
+/* 
 .email {
+  display: block;
   color: rgb(211, 214, 0);
   font-weight: 600;
-}
+} */

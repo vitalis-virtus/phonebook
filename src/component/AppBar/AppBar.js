@@ -5,11 +5,19 @@ import UserMenu from "../UserMenu";
 import styles from "./AppBar.module.css";
 import { connect } from "react-redux";
 import { authSelectors } from "../../redux/auth";
+import { GlobalSvgSelector } from "../../assets/icons/global/GlobalSvgSelector";
 
 const AppBar = ({ isAuthenticated }) => {
   return (
     <header className={styles.header}>
-      <Navigation />
+      <nav className={styles.navigation__wrapper}>
+        <a href="/" className={styles.logo}>
+          <GlobalSvgSelector id={"phone-book-logo"} />
+          <h1>Phonebook</h1>
+        </a>
+        <Navigation />
+      </nav>
+
       {isAuthenticated ? <UserMenu /> : <AuthNav />}
     </header>
   );
