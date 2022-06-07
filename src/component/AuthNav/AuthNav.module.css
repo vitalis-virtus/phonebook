@@ -1,17 +1,33 @@
 .authNav {
-  display: flex;
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
   min-width: 200px;
   justify-content: space-between;
+  border-left: #5bc8ad77 1px solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left:20px;
 }
+
 
 .authNavLink {
   text-decoration: none;
-  color: #b1d7d2;
+  color: #f1f3ce;
+  transition: 250ms ease-in-out;
+}
+
+.authNavLink:hover {
+  color: #5bc8ac;
+}
+
+.authNavLink:hover::before {
+  background-color: #5bc8ac;
 }
 
 .authNavLinkActive {
   position: relative;
-  color: #5bc8ac;
+  color: #b1d7d2;
 }
 
 .authNavLinkActive::before {
@@ -33,12 +49,9 @@
 
 @keyframes active_link_undeline {
   0% {
-    /* width: 0; */
     transform: scaleX(0);
   }
   100% {
-    /* width: calc(100% + 15%); */
     transform: scaleX(1);
   }
 }
-

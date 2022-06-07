@@ -25,11 +25,10 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.contact_form}>
         <h2>Add new contact</h2>
         <form onSubmit={this.handleSubmit} className={styles.test}>
           <label className={styles.label}>
-            <span>Name</span>
             <input
               type="text"
               name="name"
@@ -39,6 +38,8 @@ class ContactForm extends Component {
               title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
               required
               className={styles.input}
+              placeholder="Name"
+              autoComplete="off"
             />
           </label>
 
@@ -46,7 +47,6 @@ class ContactForm extends Component {
           <br />
 
           <label className={styles.label}>
-            <span>Number</span>
             <input
               type="tel"
               name="number"
@@ -56,6 +56,8 @@ class ContactForm extends Component {
               title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
               required
               className={styles.input}
+              placeholder="Number"
+              autoComplete="off"
             />
           </label>
           <button type="submit" className={styles.button}>

@@ -2,7 +2,7 @@ import React, { Component, Suspense, lazy } from "react";
 import { Switch } from "react-router-dom";
 import AppBar from "./component/AppBar/AppBar";
 import Container from "./component/Container";
-// import Phonebook from "./component/Phonebook";
+import './App.css'
 
 import { authOperations } from "./redux/auth";
 import { connect } from "react-redux";
@@ -20,7 +20,7 @@ class App extends Component {
   }
   render() {
     return (
-      <>
+      <div className="App_container">
         <AppBar />
         <Container>
           <Suspense fallback={<p>Loading...</p>}>
@@ -46,7 +46,7 @@ class App extends Component {
             </Switch>
           </Suspense>
         </Container>
-      </>
+      </div>
     );
   }
 }
