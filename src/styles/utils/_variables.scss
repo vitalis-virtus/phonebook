@@ -1,3 +1,19 @@
 $primary-text-color: #f1f3ce;
 $hover-text-color: #5bc8ac;
 $active-text-color: #b1d7d2;
+
+$filter-bgc: #f8f8ae;
+
+$header-bg: linear-gradient(
+  90deg,
+  rgba(30, 101, 109, 1) 0%,
+  rgba(0, 41, 60, 1) 100%
+);
+$header-box-shadow: 0px 6px 15px 2px #000000d2;
+
+$block-bg: linear-gradient(
+  90deg,
+  rgba(0, 41, 60, 0.9) 0%,
+  rgba(30, 101, 109, 0.9) 100%
+);
+$block-box-shadow: 0px 6px 15px 5px #000000;

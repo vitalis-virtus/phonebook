@@ -1,6 +1,9 @@
 .App_container {
   background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 100ms ease all;
 }
 
 .App_container::before {
@@ -8,6 +11,7 @@
   background: url("./assets/images/blueberries.jpg") no-repeat center
     center/cover;
   position: absolute;
+  display: block;
   width: 100%;
   height: 100%;
   top: 0;

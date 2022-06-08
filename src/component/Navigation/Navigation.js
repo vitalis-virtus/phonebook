@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { authSelectors } from "../../redux/auth";
-import styles from "./Navigation.module.css";
+import styles from "./Navigation.module.scss";
 
 const Navigation = ({ isAuthenticated }) => (
   <nav className={styles.navigation}>

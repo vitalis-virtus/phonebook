@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./ContactForm.module.css";
+import styles from "./ContactForm.module.scss";
 import PropTypes from "prop-types";
 
 class ContactForm extends Component {
@@ -42,9 +42,6 @@ class ContactForm extends Component {
               autoComplete="off"
             />
           </label>
-
-          <br />
-          <br />
 
           <label className={styles.label}>
             <input

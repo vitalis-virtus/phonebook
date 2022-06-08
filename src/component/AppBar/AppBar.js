@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "../Navigation";
 import AuthNav from "../AuthNav";
 import UserMenu from "../UserMenu";
-import styles from "./AppBar.module.css";
+import styles from "./AppBar.module.scss";
 import { connect } from "react-redux";
 import { authSelectors } from "../../redux/auth";
 import { GlobalSvgSelector } from "../../assets/icons/global/GlobalSvgSelector";

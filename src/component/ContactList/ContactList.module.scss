@@ -1,0 +1,85 @@
+@import "../../styles/utils/variables";
+
+.list__wrapper {
+  width: 400px;
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: $block-box-shadow;
+}
+
+.list__heading {
+  color: $hover-text-color;
+  padding: 0 10px;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+
+  h4:not(:last-child) {
+    margin-right: 125px;
+  }
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  color: $primary-text-color;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 10px;
+  position: relative;
+
+  &::after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    position: absolute;
+    bottom: -5px;
+    background-color: #5bc8ad34;
+  }
+}
+
+.deleteButton {
+  width: 16%;
+  height: 25px;
+  transition: 250ms ease-in-out;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.deleteButton:hover {
+  background-color: rgb(248, 134, 134);
+}
+
+.loading {
+  text-align: center;
+}
+
+.name{
+  width: 40%;
+  word-wrap: break-word;
+}
+
+
+.number{
+  width: 40%;
+  word-wrap: break-word;
+}

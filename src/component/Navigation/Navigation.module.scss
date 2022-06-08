@@ -1,6 +1,8 @@
+@import "../../styles/utils/variables";
+
 .Link {
   text-decoration: none;
-  color: #f1f3ce;
+  color: $primary-text-color;
   transition: 250ms ease-in-out;
 }
 
@@ -9,16 +11,16 @@
 }
 
 .Link:hover {
-  color: #5bc8ac;
+  color: $hover-text-color;
 }
 
 .activeLink {
-  color: #b1d7d2;
+  color: $active-text-color;
   position: relative;
 }
 
 .activeLink:hover::before {
-  background-color: #5bc8ac;
+  background-color: $hover-text-color;
 }
 
 .activeLink::before {
@@ -44,11 +46,9 @@
 
 @keyframes active_link_undeline {
   0% {
-    /* width: 0; */
     transform: scaleX(0);
   }
   100% {
-    /* width: calc(100% + 15%); */
     transform: scaleX(1);
   }
 }

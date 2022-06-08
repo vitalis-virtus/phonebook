@@ -2,8 +2,8 @@ import React from "react";
 import ContactList from "../component/ContactList";
 import Filter from "../component/Filter";
 import ContactForm from "../component/ContactForm";
-import styles from "../component/Phonebook/Phonebook.module.css";
 import { connect } from "react-redux";
+import styles from "./styles/ContactsView.module.scss";
 
 import {
   phonebookOperations,
@@ -23,17 +23,16 @@ const ContactsView = ({
 
   return (
     <div className={styles.app}>
-      <div>
-
-      <ContactForm onSubmit={onAddContact}></ContactForm>
-      <Filter
-        contactsLength={getContactsLength}
-        value={filter}
-        onChange={onChangeFilter}
-      ></Filter>
+      <div className={styles.edit_field}>
+        <ContactForm onSubmit={onAddContact}></ContactForm>
+        <Filter
+          contactsLength={getContactsLength}
+          value={filter}
+          onChange={onChangeFilter}
+        ></Filter>
       </div>
       {/* {contactsLength > 0 && <h2 className={styles.header}>Contacts</h2>} */}
-      <ContactList  
+      <ContactList
         contacts={visibleContacts}
         onDeleteContact={onDeleteContact}
       ></ContactList>

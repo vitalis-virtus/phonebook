@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import styles from "./ContactList.module.css";
+import styles from "./ContactList.module.scss";
 
 import { connect } from "react-redux";
 
 import { phonebookOperations, phonebookSelectors } from "../../redux/phonebook";
-
-// import phonebookOperations from "../../redux/phonebook/phonebook-operations";
-
-// import phonebookSelectors from "../../redux/phonebook/phonebook-selectors.js";
-
 class ContactList extends Component {
   state = {
     contacts: [],
@@ -21,23 +16,33 @@ class ContactList extends Component {
 
   render() {
     return (
-      <ul className={styles.list}>
-        {this.props.isLoadingContacts && (
+      <div className={styles.list__wrapper}>
+        <div className={styles.list__heading}>
+          <h4>Name</h4>
+          <h4>Phone</h4>
+        </div>
+
+        <ul className={styles.list}>
+          {/* {this.props.isLoadingContacts && (
           <h3 className={styles.loading}>Loading contacts...</h3>
-        )}
-        {this.props.contacts.map((contact) => (
-          <li key={contact.id} className={styles.listItem}>
-            {contact.name}: {contact.number}
-            <button
-              type="button"
-              onClick={() => this.props.onDeleteContact(contact.id)}
-              className={styles.deleteButton}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+        )} */}
+          {this.props.contacts.map((contact) => (
+            <li key={contact.id} className={styles.listItem}>
+              <p className={styles.name}>
+              {contact.name}
+              </p>
+              <p className={styles.number}>{contact.number}</p>
+              <button
+                type="button"
+                onClick={() => this.props.onDeleteContact(contact.id)}
+                className={styles.deleteButton}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }
