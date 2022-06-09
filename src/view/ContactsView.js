@@ -31,7 +31,6 @@ const ContactsView = ({
           onChange={onChangeFilter}
         ></Filter>
       </div>
-      {/* {contactsLength > 0 && <h2 className={styles.header}>Contacts</h2>} */}
       <ContactList
         contacts={visibleContacts}
         onDeleteContact={onDeleteContact}

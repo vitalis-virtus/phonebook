@@ -1,6 +1,7 @@
 .App_container {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   transition: 100ms ease all;
