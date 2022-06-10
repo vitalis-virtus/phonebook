@@ -1,3 +1,5 @@
+@import "../../styles/utils/variables";
+
 .logoutBtn {
   min-width: 75px;
   min-height: 30px;
@@ -18,21 +20,13 @@
   align-items: center;
   justify-content: space-between;
   min-width: 300px;
-  color: #b1d7d2;
-  
+  color: $active-text-color;
 }
-.userMenu__userInfo{
+.userMenu__userInfo {
   display: flex;
-  
 }
 
-.userMenu svg{
-  fill: #b1d7d2;
+.userMenu svg {
+  fill: $active-text-color;
   margin-right: 10px;
 }
-/* 
-.email {
-  display: block;
-  color: rgb(211, 214, 0);
-  font-weight: 600;
-} */

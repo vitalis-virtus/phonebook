@@ -2,7 +2,7 @@ import React, { Component, Suspense, lazy } from "react";
 import { Switch } from "react-router-dom";
 import AppBar from "./component/AppBar/AppBar";
 import Container from "./component/Container";
-import './App.css'
+import './App.scss'
 
 import { authOperations } from "./redux/auth";
 import { connect } from "react-redux";

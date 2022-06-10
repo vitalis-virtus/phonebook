@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { GlobalSvgSelector } from "../../assets/icons/global/GlobalSvgSelector";
 import { authSelectors, authOperations } from "../../redux/auth";
-import styles from "./UserMenu.module.css";
+import styles from "./UserMenu.module.scss";
 
 const UserMenu = ({ email, onLogout }) => (
   <div className={styles.userMenu}>

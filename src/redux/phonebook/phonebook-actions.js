@@ -23,17 +23,4 @@ export const deleteContactSuccess = createAction(
 );
 export const deleteContactError = createAction("phonebook/deleteContactError");
 
-// export const addContact = createAction(
-//   "phonebook/addContact",
-//   (name, number) => {
-//     return {
-//       payload: {
-//         name: name,
-//         number: number,
-//         id: uuidv4(),
-//       },
-//     };
-//   }
-// );
-
 export const changeFilter = createAction("phonebook/changeFilter");
