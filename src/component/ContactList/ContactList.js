@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styles from "./ContactList.module.scss";
 
+import ClipLoader from "react-spinners/ClipLoader";
+
 import { connect } from "react-redux";
 
 import { phonebookOperations, phonebookSelectors } from "../../redux/phonebook";
@@ -22,15 +24,15 @@ class ContactList extends Component {
           <h4>Phone</h4>
         </div>
 
+        {this.props.isLoadingContacts && (
+          <div className={styles.spinner_Container}>
+            <ClipLoader loading={true} cssOverride={{}} size={100} />
+          </div>
+        )}
         <ul className={styles.list}>
-          {/* {this.props.isLoadingContacts && (
-          <h3 className={styles.loading}>Loading contacts...</h3>
-        )} */}
           {this.props.contacts.map((contact) => (
             <li key={contact.id} className={styles.listItem}>
-              <p className={styles.name}>
-              {contact.name}
-              </p>
+              <p className={styles.name}>{contact.name}</p>
               <p className={styles.number}>{contact.number}</p>
               <button
                 type="button"

@@ -2,7 +2,8 @@ import React, { Component, Suspense, lazy } from "react";
 import { Switch } from "react-router-dom";
 import AppBar from "./component/AppBar/AppBar";
 import Container from "./component/Container";
-import './App.scss'
+import ClipLoader from "react-spinners/ClipLoader";
+import "./App.scss";
 
 import { authOperations } from "./redux/auth";
 import { connect } from "react-redux";
@@ -23,7 +24,16 @@ class App extends Component {
       <div className="App_container">
         <AppBar />
         <Container>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <ClipLoader
+                color={"#f1f3ce"}
+                loading={true}
+                cssOverride={{}}
+                size={150}
+              />
+            }
+          >
             <Switch>
               <PublicRoute exact path="/" component={HomeView} />
               <PublicRoute

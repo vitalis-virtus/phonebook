@@ -15,11 +15,6 @@ import {
   REGISTER,
 } from "redux-persist";
 
-// const myMiddleware = (store) => (next) => (action) => {
-//   console.log("hello");
-//   next(action);
-// };
-
 const middleware = [
   ...getDefaultMiddleware({
     serializableCheck: {
