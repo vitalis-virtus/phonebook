@@ -60,7 +60,7 @@ class RegisterView extends Component {
           <label className={styles.label}>
             <input
               required
-              type="text"
+              type="password"
               name="password"
               value={password}
               onChange={this.handleChange}

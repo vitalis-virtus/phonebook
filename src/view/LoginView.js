@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { authOperations } from "../redux/auth";
-// import styles from "./Views.module.css";
 import styles from "./styles/LoginView.module.scss";
 
 class LoginView extends Component {
@@ -48,7 +47,7 @@ class LoginView extends Component {
           <label className={styles.label}>
             <input
               required
-              type="text"
+              type="password"
               name="password"
               value={password}
               onChange={this.handleChange}
