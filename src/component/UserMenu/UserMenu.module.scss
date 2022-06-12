@@ -21,9 +21,18 @@
   justify-content: space-between;
   min-width: 300px;
   color: $active-text-color;
+  flex-direction: row;
+
+  @media screen and(max-width:767px) {
+    flex-direction: column;
+  }
 }
 .userMenu__userInfo {
   display: flex;
+  margin: 0;
+  @media screen and(max-width:767px) {
+   margin-bottom: 15px; 
+  }
 }
 
 .userMenu svg {

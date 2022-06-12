@@ -40,8 +40,11 @@
   animation-iteration-count: 1;
 }
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @keyframes active_link_undeline {

@@ -1,0 +1,40 @@
+@import "../../styles/utils/variables";
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  left: 0;
+  transform: translateX(100%);
+  transition: all ease-in-out 400ms;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu_active {
+  @extend .menu;
+  transform: translateX(0);
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  backdrop-filter: blur(2px);
+  position: absolute;
+}
+
+.menu_content {
+  width: 40%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  background: $block-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}

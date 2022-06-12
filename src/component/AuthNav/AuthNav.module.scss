@@ -1,5 +1,8 @@
+@import "../../styles/utils/variables";
+
 .authNav {
   display: inline-flex;
+  flex-direction: row;
   height: 100%;
   align-items: center;
   min-width: 200px;
@@ -7,27 +10,38 @@
   border-left: #5bc8ad77 1px solid;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding-left:20px;
-}
+  padding-left: 20px;
 
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    width: auto;
+  }
+}
 
 .authNavLink {
   text-decoration: none;
-  color: #f1f3ce;
+  color: $primary-text-color;
   transition: 250ms ease-in-out;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .authNavLink:hover {
-  color: #5bc8ac;
+  color: $hover-text-color;
 }
 
 .authNavLink:hover::before {
-  background-color: #5bc8ac;
+  background-color: $hover-text-color;
 }
 
 .authNavLinkActive {
   position: relative;
-  color: #b1d7d2;
+  color: $active-text-color;
 }
 
 .authNavLinkActive::before {
@@ -39,7 +53,7 @@
   left: -7%;
   height: 2px;
   border-radius: 10px;
-  background-color: #b1d7d2;
+  background-color: $active-text-color;
   transition: ease-in-out 250ms;
   animation-name: active_link_undeline;
   animation-duration: 250ms;
