@@ -82,3 +82,4 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(RegisterView);
+

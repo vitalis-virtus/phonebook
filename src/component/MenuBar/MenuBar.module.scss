@@ -28,7 +28,7 @@
 }
 
 .menu_content {
-  width: 40%;
+  width: 45%;
   height: 100%;
   right: 0;
   position: absolute;
@@ -37,4 +37,9 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  list-style: none;
+  margin: 0;
+  z-index: 50;
 }
+
+

@@ -14,4 +14,88 @@
     width: 300px;
     margin-right: 50px;
   }
+
+  @media screen and (max-width: 767px) {
+    min-width: 250px;
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .edit_field {
+      display: none;
+    }
+  }
+}
+
+.edit_field_mobile {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .add_contact {
+    display: block;
+  }
+
+  .filter_contact {
+    display: block;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+
+.Modal {
+  position: absolute;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: $block-bg;
+  padding: 20px;
+  text-align: center;
+  box-shadow: $block-box-shadow;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  backdrop-filter: blur(2px);
+  background-color: transparent;
+}
+
+.add_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $primary-text-color;
+  transition: 250ms ease-in-out;
+  font-weight: 400;
+  color: $primary-text-color;
+  border-radius: 100%;
+  transition: 250ms ease-in-out all;
+}
+
+.add_contact:hover {
+  font-weight: 900;
+  color: $hover-text-color;
+  border-color: $hover-text-color;
+  background-color: rgba(0, 0, 0, 0.185);
+  border-width: 2px;
+  transition: 250ms ease-in-out all;
 }

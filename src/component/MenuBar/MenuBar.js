@@ -9,9 +9,10 @@ export default function MenuBar({ active, setActive, items }) {
     >
       <div className={styles.blur}></div>
 
-      <div className={styles.menu_content} onClick={event=>{event.stopPropagation()}}>
-        <div>{items.map((item) => item)}</div>
-      </div>
+      <ul className={styles.menu_content} onClick={event=>{event.stopPropagation()}}>
+        {items.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
     </div>
   );
 }
+  
