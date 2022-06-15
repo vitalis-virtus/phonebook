@@ -47,7 +47,6 @@ const ContactsView = ({
           value={filter}
           onChange={onChangeFilter}
         ></Filter>
-        {/* <button className={styles.filter_contact}>find</button> */}
       </div>
 
       <Modal
@@ -57,7 +56,10 @@ const ContactsView = ({
         contentLabel="Example Modal"
         overlayClassName={styles.Overlay}
       >
-        <ContactForm onSubmit={onAddContact}></ContactForm>
+        <ContactForm
+          onCloseModal={closeModal}
+          onSubmit={onAddContact}
+        ></ContactForm>
       </Modal>
 
       <ContactList
@@ -78,8 +80,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddContact: ({ name, number }) =>
-      dispatch(phonebookOperations.addContact(name, number)),
+    onAddContact: ({ name, number }) => {
+      return dispatch(phonebookOperations.addContact(name, number));
+    },
     onDeleteContact: (id) => dispatch(phonebookOperations.deleteContact(id)),
     onChangeFilter: (value) => dispatch(changeFilter(value)),
   };

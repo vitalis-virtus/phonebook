@@ -17,18 +17,20 @@
 .menu_active {
   @extend .menu;
   transform: translateX(0);
+  z-index: 100;
 }
 
 .blur {
   width: 100vw;
   height: 100vh;
   left: 0;
+  top: 0;
   backdrop-filter: blur(2px);
   position: absolute;
 }
 
 .menu_content {
-  width: 45%;
+  width: 50%;
   height: 100%;
   right: 0;
   position: absolute;
@@ -36,10 +38,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding: 30px 10px 0 10px;
   list-style: none;
   margin: 0;
-  z-index: 50;
+  z-index: 100;
 }
-
-

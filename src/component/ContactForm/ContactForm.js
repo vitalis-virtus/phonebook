@@ -16,6 +16,9 @@ class ContactForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.onSubmit(this.state);
+    if (this.props.onCloseModal) {
+      this.props.onCloseModal();
+    }
     this.reset();
   };
 

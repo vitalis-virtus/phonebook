@@ -7,12 +7,11 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 250ms ease-in-out;
-  background-color: rgb(231, 231, 231);
+  background-color: #fff;
 }
 
 .logoutBtn:hover {
-  background-color: #fff;
-  transform: scale(1.1);
+  background-color: $primary-text-color ;
 }
 
 .userMenu {
