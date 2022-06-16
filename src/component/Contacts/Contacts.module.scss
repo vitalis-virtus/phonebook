@@ -1,0 +1,94 @@
+@import '../../styles/utils/variables';
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  color: $active-text-color;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 10px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 1px;
+    position: absolute;
+    bottom: -5px;
+    background-color: #5bc8ad34;
+  }
+}
+
+.deleteButton {
+  width: 65px;
+  height: 25px;
+  background-color: #fff;
+  transition: 250ms ease-in-out;
+  border: 1px black solid;
+  border-radius: 5px;
+
+  @media screen and(max-width: 767px) {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: transparent;
+    border-color: $hover-text-color;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 2px;
+      background-color: $filter-bgc;
+      display: block;
+      top: 10px;
+      left: 4px;
+
+      transform: rotate(45deg);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 2px;
+      background-color: $filter-bgc;
+      display: block;
+      top: 10px;
+      left: 4px;
+
+      transform: rotate(-45deg);
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.deleteButton:hover {
+  background-color: rgb(248, 134, 134);
+}
+
+.name {
+  width: 40%;
+  word-wrap: break-word;
+}
+
+.number {
+  width: 40%;
+  word-wrap: break-word;
+}
