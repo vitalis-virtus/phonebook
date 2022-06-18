@@ -13,7 +13,13 @@
 }
 
 .navigation__wrapper {
+  nav {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
+    nav {
+      display: block;
+    }
     display: flex;
     align-items: center;
     height: 100%;
@@ -68,16 +74,35 @@
 
 .burger_btn {
   cursor: pointer;
+  outline: none;
+  border: none;
+
+  &:focus,
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
+
   @media screen and(min-width: 768px) {
     display: none;
   }
 }
 
-.menuWrapper{
+.burger_btn div {
+  &:focus,
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
+}
+
+.menuWrapper {
   height: 100%;
   display: flex;
   align-items: center;
   @media screen and (max-width: 767px) {
-      display: none;
+    display: none;
   }
 }

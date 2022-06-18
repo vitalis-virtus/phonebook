@@ -55,7 +55,7 @@ const ContactList = ({
             breakLabel="..."
             nextLabel="next >"
             onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
+            pageRangeDisplayed={4}
             pageCount={pageCount}
             previousLabel="< previous"
             renderOnZeroPageCount={null}
@@ -64,6 +64,7 @@ const ContactList = ({
             activeLinkClassName={styles.pagination__element_active}
             previousClassName={styles.pagination__previous}
             nextClassName={styles.pagination__next}
+            disabledClassName={styles.pagination__disabled}
           />
         </div>
       )}

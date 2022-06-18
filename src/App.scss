@@ -5,6 +5,12 @@
   position: relative;
   overflow: hidden;
   transition: 100ms ease all;
+
+  div,
+  div:active,
+  div:focus {
+    outline: none;
+  }
 }
 
 .App_container::before {

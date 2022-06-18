@@ -15,15 +15,13 @@ const AppBar = ({ isAuthenticated }) => {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.navigation__wrapper}>
+      <div className={styles.navigation__wrapper}>
         <a href="/" className={styles.logo}>
           <GlobalSvgSelector id={"phone-book-logo"} />
           <h1>Phonebook</h1>
         </a>
         <Navigation />
-      </nav>
-
-      {/* burger-menu-button */}
+      </div>
 
       <div
         className={styles.burger_btn}
@@ -37,13 +35,14 @@ const AppBar = ({ isAuthenticated }) => {
           color="#f1f3ce"
           toggled={menuActive}
           toggle={setMenuActive}
+          id="hamburger__react"
         />
       </div>
 
       <MenuBar
         active={menuActive}
         setActive={setMenuActive}
-        items={isAuthenticated ? [<UserMenu />] : [<AuthNav />]}
+        items={isAuthenticated ? [<UserMenu />, <Navigation />] : [<AuthNav />]}
       />
 
       <div className={styles.menuWrapper}>

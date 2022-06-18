@@ -8,10 +8,11 @@
   cursor: pointer;
   transition: 250ms ease-in-out;
   background-color: #fff;
+  color: #000;
 }
 
 .logoutBtn:hover {
-  background-color: $primary-text-color ;
+  background-color: $primary-text-color;
 }
 
 .userMenu {
@@ -30,7 +31,7 @@
   display: flex;
   margin: 0;
   @media screen and(max-width:767px) {
-   margin-bottom: 15px; 
+    margin-bottom: 15px;
   }
 }
 
